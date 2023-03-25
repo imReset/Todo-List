@@ -1,0 +1,223 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input, select {
+  margin-bottom: 1rem;
+}
+
+.todo-items {
+  border: 1px solid black;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.todo-items:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+li {
+  list-style: none;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+#add-project-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* hamburger menu */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  width: 20%;
+  padding: 20px;
+  background-color: #f1f1f1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  transform: translateX(-100%);
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-list h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-list .project {
+  font-size: 16px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.project-list .project.active {
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.todo-items {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.todo-items h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.todo-items p {
+  margin-bottom: 5px;
+}
+
+
+
+.todo-items button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.todo-items button:hover {
+  opacity: 0.8;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+form button:hover {
+  opacity: 0.8;
+}
+
+/* Hamburger menu */
+.sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.hamburger-icon,
+.close-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-icon {
+  transform: rotate(45deg);
+}
+
+.sidebar.active .hamburger-icon {
+  transform: rotate(45deg);
+}
+
+.sidebar.active .close-icon {
+  transform: rotate(-45deg);
+}
+
+label[for="title"]:before, 
+label[for="dueDate"]:before, 
+label[for="priority"]:before {
+  content: '*';
+  color: red;
+  margin-left: 5px;
+}
+

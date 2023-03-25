@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <div class="container">
+      <nav class="sidebar">
+        <ul class="project-list">
+          <button class="sidebar-toggle" aria-label="toggle-sidebar">
+            <span class="hamburger-icon"></span>
+            <span class="close-icon"></span>
+          </button>
+          <h2>Projects</h2>
+          <li class="project active">Default Project</li>
+        </ul>
+        <form id="projects">
+          <label for="project-name">
+            <input type="text" id="project-name" placeholder="Project name" />
+          </label>
+          <button id="add-project-btn">Add Project</button>
+        </form>
+      </nav>
+    </div>
+
+    <main class="main-content"></main>
+    <form id="todo-form">
+      <label for="title">Title: <span class="required"></span> </label>
+      <input id="title" type="text" placeholder="Walk the dog" required />
+
+      <label for="description">Description:</label>
+      <input id="description" type="text" placeholder="Bring the dog to park" />
+
+      <label for="dueDate">Due Date <span class="required"></span></label>
+      <input type="date" id="dueDate" required />
+
+      <label for="priority">Priority <span class="required"></span></label>
+      <select name="priority" id="priority" required>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button type="submit" value="todoSubmit" id="submitBtn">Submit</button>
+    </form>
+    <ul id="todo-list"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>
